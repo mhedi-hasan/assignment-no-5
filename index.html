@@ -12,19 +12,105 @@
     <!-- css link -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body class="mb-14">
     <!-- header section start here -->
-    <header></header>
+    <header class="lg:mx-20 mx-1 raleway-font pt-2 lg:pt-4">
+        <section>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow text-[16px] opacity-75 font-medium bg-base-100 rounded-box w-52">
+                      <li><a>Home</a></li>
+                      <li><a>About</a></li>
+                      <li><a>Destination</a></li>
+                      <li><a>Search</a></li>
+                    </ul>
+                  </div>
+                  <a class="lg:text-3xl text-2xl font-bold lg:font-bold">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu font-medium opacity-75 text-[16px] menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                      <li><a>About</a></li>
+                      <li><a>Destination</a></li>
+                      <li><a>Search</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="btn text-[#1DD100] border-[1px] border-[#1DD100] bg-[#e8ffe5] lg:px-5 font-semibold text-lg">Bus <img src="images/bus-icon.png" alt=""></a>
+                </div>
+              </div>
+        </section>
+    </header>
     <!-- header section end here -->
-    <!-- --------------------------------------------------------------------- -->
+    <!-------------------------------------------------------------------->
     <!-- main section start here -->
-    <main></main>
+    <main class="lg:mx-20 lg:pt-5">
+        <!-- banner section start here -->
+        <section class="relative">
+            <div class="hero raleway-font min-h-[444px] object-contain" style="background-image: url(./images/banner.png);">
+                <div></div>
+                <div class="hero-content text-center text-neutral-content">
+                <div class="lg:pb-14">
+                    <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with</h1>
+                    <h1 class="mb-5 text-5xl font-bold text-[#1DD100]">P Paribahan</h1>
+                    <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+                    <button class="btn btn-primary bg-[#1DD100] text-black font-bold text-xl border-none">Buy Tickets</button>
+                </div>
+                </div>
+            </div>
+                <!-- 3 card section -->
+                <!-- 1st card -->
+                <div class="absolute space-x-28 left-20 -bottom-12 flex inter-font  gap-4">
+                    <div class="bg-white border-b-[3px] shadow-2xl border-b-[#54dc3e] px-6 py-4 rounded-xl">
+                        <div class="flex gap-3">
+                            <img class="h-12" src="./images/people.png" alt="people image">
+                        <div>
+                        <h1 class="text-3xl font-bold">500K+</h1>
+                        <p class="font-normal text-[16px] opacity-75">Registered users</p>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- 2nd card -->
+                    <div class="bg-white border-b-[3px] shadow-2xl border-b-[#54dc3e] px-6 py-4 rounded-xl">
+                        <div class="flex gap-3">
+                            <img class="h-12" src="./images/ticket-cupon.png" alt="people image">
+                        <div>
+                        <h1 class="text-3xl font-bold">1.7 lacks</h1>
+                        <p class="font-normal text-[16px] opacity-75">Tickets sold</p>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- 3rd card -->
+                    <div class="bg-white border-b-[3px] shadow-2xl border-b-[#54dc3e] px-6 py-4 rounded-xl">
+                        <div class="flex gap-3">
+                            <img class="h-12" src="./images/stoppage.png" alt="people image">
+                        <div>
+                        <h1 class="text-3xl font-bold">80K+</h1>
+                        <p class="font-normal text-[16px] opacity-75">Rental partners</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- banner section end here -->
+        <!-- discount section start here -->
+        <section>
+            <div>
+                <h1>Best offers for you</h1>
+            </div>
+        </section>
+        <!-- discount section start end -->
+    </main>
     <!-- main section end here -->
-    <!-- --------------------------------------------------------------------- -->
+    <!-------------------------------------------------------------------->
     <!-- footer section start here -->
     <footer></footer>
     <!-- footer section end here -->
-    <!-- --------------------------------------------------------------------- -->
+    <!-------------------------------------------------------------------->
     <!-- js file link -->
     <script src="js/script.js"></script>
 </body>
