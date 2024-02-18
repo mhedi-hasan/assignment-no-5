@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <section class="hidden" id="main-section">
+    <section id="main-section">
        <!-- header section start here -->
     <header class=" lg:mx-20 mx-1 raleway-font pt-2 lg:pt-4">
       <section>
@@ -515,12 +515,11 @@
           </div>
           <label
             class="input outline-none border-none focus:outline-none focus:border-none flex items-center gap-2 mt-3">
-            <input
-              type="text"
+            <input type="text" id="delete-confirm"
               class="grow outline-none border-none focus:outline-none focus:border-none"
               placeholder="Have any coupon?"/>
             <span
-              class="rounded-lg mr-6 text-white"><button class="btn bg-[#1DD100] text-[17px]">Apply</button></span>
+              class="rounded-lg mr-6 text-white"><button disabled onclick="applyButton()" id="apply-button" class="btn bg-[#1DD100] text-[17px]">Apply</button></span>
           </label>
           <div class="flex justify-between items-center py-5">
             <h1 class="inter-font font-medium">Grand total:</h1>
