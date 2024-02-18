@@ -8,6 +8,8 @@
     font-family: "Inter", sans-serif;
 }
 
-
-
-
+.clickbtn{
+    background-color: rgb(236, 234, 234);
+    padding: 12px 8px;
+    border-radius: 7px;
+}

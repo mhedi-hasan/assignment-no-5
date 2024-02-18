@@ -23,3 +23,37 @@ function applyButton(){
     const applyButtonSection=document.getElementById('apply-button');
     applyButtonSection.classList.add('hidden');
 }
+// button background color change
+const buttons = document.getElementsByClassName("clickbtn");
+  for (let button of buttons) {
+    button.addEventListener("click", function(e){
+        var element = document.getElementById(e.target.id);
+        element.classList.toggle("bg-[#1DD100]");
+        element.classList.toggle("text-white");
+    });
+}
+function newButtons(){
+const newButtons=document.getElementById('current-seat');
+const newButtonsText=newButtons.innerText;
+const newSeats=parseInt(newButtonsText)
+// console.log(newSeats);
+const newButtonValue=newSeats+1;
+newButtons.innerText=newButtonValue;
+console.log(newButtons);
+// seat available
+const availableSeat=document.getElementById('available-seat');
+    const availableSeatElement= availableSeat.innerText;
+    const available=parseInt(availableSeatElement);
+    const updateSeat=available-1;
+    availableSeat.innerText=updateSeat;
+if(newButtonValue ===5){
+    alert('You can book only four seats');
+}
+}
+// function newButtons(){
+//     const availableSeat=document.getElementById('available-seat');
+//     const availableSeatElement= availableSeat.innerText;
+//     const available=parseInt(availableSeatElement);
+//     const updateSeat=available-1;
+//     availableSeat.innerText=updateSeat;
+// }
