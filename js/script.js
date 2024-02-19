@@ -8,6 +8,12 @@ function modalSection(){
     const doneSection=document.getElementById('modal');
     doneSection.classList.remove('hidden')
 }
+function modalHide(){
+    const mainSection=document.getElementById('modal');
+    mainSection.classList.add('hidden');
+    const mainSections=document.getElementById('main-section');
+    mainSections.classList.remove('hidden');
+}
 // apply button function
 document.getElementById('delete-confirm').addEventListener('keyup',function(event){
     const text = event.target.value;
@@ -16,6 +22,15 @@ document.getElementById('delete-confirm').addEventListener('keyup',function(even
         deleteButton.removeAttribute('disabled')
     }else{
         deleteButton.setAttribute('disabled',true)
+    }
+})
+document.getElementById('phone-number').addEventListener('keyup',function(event){
+    const number = event.target.value;
+    const deleteButtons=document.getElementById('next-button');
+    if(number===number){
+        deleteButtons.removeAttribute('disabled')
+    }else{
+        deleteButtons.setAttribute('disabled',true)
     }
 })
 // apply button hidden function
@@ -46,10 +61,11 @@ const availableSeat=document.getElementById('available-seat');
     const available=parseInt(availableSeatElement);
     const updateSeat=available-1;
     availableSeat.innerText=updateSeat;
-if(newButtonValue ===5){
+if(newButtonValue===5){
     alert('You can book only four seats');
+    }
 }
-}
+
 // function newButtons(){
 //     const availableSeat=document.getElementById('available-seat');
 //     const availableSeatElement= availableSeat.innerText;
