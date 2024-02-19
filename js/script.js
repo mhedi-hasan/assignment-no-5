@@ -1,4 +1,4 @@
-//
+
 function modalSection(){
     // console.log('Mehedi Hasan is the best man in bangladesh.')
     // step--1: hide the all section and
@@ -27,49 +27,36 @@ document.getElementById('delete-confirm').addEventListener('keyup',function(even
 document.getElementById('phone-number').addEventListener('keyup',function(event){
     const number = event.target.value;
     const deleteButtons=document.getElementById('next-button');
-    if(number===number){
+    if(number.length===11){
         deleteButtons.removeAttribute('disabled')
     }else{
         deleteButtons.setAttribute('disabled',true)
     }
 })
-// apply button hidden function
+// // apply button hidden function
 function applyButton(){
     const applyButtonSection=document.getElementById('apply-button');
     applyButtonSection.classList.add('hidden');
 }
-// button background color change
-const buttons = document.getElementsByClassName("clickbtn");
-  for (let button of buttons) {
-    button.addEventListener("click", function(e){
+
+// // ----------------------------------------------
+const allBtn=document.getElementsByClassName('clickbtn');
+console.log(allBtn);
+let count=0;
+let counts=40;
+for(const btn of allBtn){
+    btn.addEventListener('click',function(e){
+        count=count+1;
+        counts=counts-1;
+        document.getElementById('current-seat').innerText=count;
+        document.getElementById('available-seat').innerText=counts;
+        // --------------------------
         var element = document.getElementById(e.target.id);
         element.classList.toggle("bg-[#1DD100]");
         element.classList.toggle("text-white");
-    });
+        // -------------------------------
+        if(count===5){
+            alert('You can book only four seats');
+            }
+    })
 }
-function newButtons(){
-const newButtons=document.getElementById('current-seat');
-const newButtonsText=newButtons.innerText;
-const newSeats=parseInt(newButtonsText)
-// console.log(newSeats);
-const newButtonValue=newSeats+1;
-newButtons.innerText=newButtonValue;
-console.log(newButtons);
-// seat available
-const availableSeat=document.getElementById('available-seat');
-    const availableSeatElement= availableSeat.innerText;
-    const available=parseInt(availableSeatElement);
-    const updateSeat=available-1;
-    availableSeat.innerText=updateSeat;
-if(newButtonValue===5){
-    alert('You can book only four seats');
-    }
-}
-
-// function newButtons(){
-//     const availableSeat=document.getElementById('available-seat');
-//     const availableSeatElement= availableSeat.innerText;
-//     const available=parseInt(availableSeatElement);
-//     const updateSeat=available-1;
-//     availableSeat.innerText=updateSeat;
-// }
