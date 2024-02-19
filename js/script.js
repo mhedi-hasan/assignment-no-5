@@ -50,7 +50,9 @@ document
   .getElementById("phone-number")
   .addEventListener("keyup", function (event) {
     const number = event.target.value;
+    const text = event.target.value;
     const deleteButtons = document.getElementById("next-button");
+    // -----------------------------
     if (number.length === 11) {
       deleteButtons.removeAttribute("disabled");
     } else {
@@ -143,7 +145,7 @@ const addToSeatList = function (e, newButtonValue) {
   const addNewRow = document.createElement("tr");
   addNewRow.id = `row-${e.target.id}`;
   addNewRow.innerHTML = `
-    <td id="table-data" class="py-2">A${newButtonValue}</td>
+  <td id="table-data" class="py-2">${e.target.id}</td>
     <td>Economy</td>
     <td class="singleSeatPrice text-right">550</td>
   `;
